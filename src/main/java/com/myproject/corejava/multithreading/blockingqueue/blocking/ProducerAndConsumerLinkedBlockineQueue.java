@@ -1,11 +1,18 @@
 package com.myproject.corejava.multithreading.blockingqueue.blocking;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class ProducerAndConsumerLinkedBlockineQueue {
 
     public static void main(String args[]) throws InterruptedException{
+
+        BlockingQueue<Integer> queue1 = new LinkedBlockingDeque<>();
+
+        BlockingQueue<Integer> queue2 = new ArrayBlockingQueue<>(2);
+
+
         BlockingQueue<Integer> queue = new LinkedBlockingDeque<>(2);
 
         Thread producer = new Thread(()->{
@@ -36,7 +43,6 @@ public class ProducerAndConsumerLinkedBlockineQueue {
         producer.start();
         consumer.start();
 
-        producer.join();
-        consumer.join();
+
     }
 }
