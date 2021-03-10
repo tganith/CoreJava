@@ -7,7 +7,7 @@ public class ProducerAndConsumer {
 
 
     public static void main(String args[]) {
-        Buffer buffer = new Buffer(2);
+        Buffer buffer = new Buffer(5);
 
 
         Thread  producerThread = new Thread(()->{
@@ -52,9 +52,9 @@ public class ProducerAndConsumer {
                     queue.add(value);
                     System.out.println("produced= "+value);
                     value++;
-
-                    notify();
                     Thread.sleep(1000);
+                    notify();
+
                }
             }
         }
@@ -69,8 +69,9 @@ public class ProducerAndConsumer {
 
                     int value = queue.poll();
                     System.out.println("Consume= "+value);
-                    notify();
                     Thread.sleep(1000);
+                    notify();
+
                 }
             }
         }

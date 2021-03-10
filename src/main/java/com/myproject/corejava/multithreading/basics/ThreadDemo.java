@@ -4,11 +4,11 @@ public class ThreadDemo {
 
     public static void main(String args[]) {
 
-        /*ThreadPrg threadPrg = new ThreadPrg();
+        ThreadPrg threadPrg = new ThreadPrg();
         threadPrg.start();
-        */
 
-        int count = Runtime.getRuntime().availableProcessors();
-        System.out.println(count);
+
+       /* int count = Runtime.getRuntime().availableProcessors();
+        System.out.println(count);*/
     }
 }

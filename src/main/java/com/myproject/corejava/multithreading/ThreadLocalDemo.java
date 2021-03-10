@@ -7,6 +7,7 @@ public class ThreadLocalDemo  implements Runnable{
 
     public void run(){
         ThreadLocal local = new ThreadLocal();
+
         local.set(new Random().nextInt());
 
         try {

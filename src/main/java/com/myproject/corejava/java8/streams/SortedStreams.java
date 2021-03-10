@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SortedStreams {
 
@@ -37,6 +38,8 @@ public class SortedStreams {
         int maxValue = list.stream().max((i1, i2)->-i1.compareTo(i2)).get();
         System.out.println("maximum value:"+maxValue);
 
+
+       Stream<Integer> list2 = list.stream();
 
 
     }

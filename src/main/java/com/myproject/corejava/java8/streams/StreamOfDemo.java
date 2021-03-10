@@ -19,9 +19,9 @@ public class StreamOfDemo {
         // passing array
         Integer[] array = {10,20,30,1,5};
         Stream<Integer>  arrayStream = Stream.of(array);
-        arrayStream.forEach(System.out::println);
+      //  arrayStream.forEach(System.out::println);
 
-        //arrayStream.forEach(s->System.out.println(s));
+        Stream.of(array).forEach(s->System.out.println(s));
 
 
     }

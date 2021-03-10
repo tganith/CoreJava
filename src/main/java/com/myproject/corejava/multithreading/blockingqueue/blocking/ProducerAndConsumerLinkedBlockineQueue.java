@@ -8,12 +8,7 @@ public class ProducerAndConsumerLinkedBlockineQueue {
 
     public static void main(String args[]) throws InterruptedException{
 
-        BlockingQueue<Integer> queue1 = new LinkedBlockingDeque<>();
-
-        BlockingQueue<Integer> queue2 = new ArrayBlockingQueue<>(2);
-
-
-        BlockingQueue<Integer> queue = new LinkedBlockingDeque<>(2);
+        BlockingQueue<Integer> queue = new LinkedBlockingDeque<>(5);
 
         Thread producer = new Thread(()->{
             try{
